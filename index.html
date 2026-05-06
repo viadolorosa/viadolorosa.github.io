@@ -2,40 +2,10 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Тестовая страница</title>
     <style>
-        body {
-            font-family: sans-serif;
-            background-color: #f4f7f6;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .card {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            text-align: center;
-            max-width: 400px;
-            width: 100%;
-        }
-        .phone-box {
-            background: #eef2ff;
-            padding: 15px;
-            border-radius: 8px;
-            margin: 10px 0;
-            border: 1px solid #d1d5db;
-        }
-        .phone-number {
-            font-size: 22px;
-            font-weight: bold;
-            color: #2563eb;
-            text-decoration: none;
-        }
+        body { font-family: sans-serif; padding: 50px; text-align: center; }
+        .phone-number { font-size: 30px; color: blue; text-decoration: none; display: block; margin: 20px; }
     </style>
     <!-- Novofon -->
     <script type="text/javascript" async src="https://widget.novofon.ru/novofon.js?k=cakbuFqNIoqmPlC3CKakPIsuHvOsOGri"></script>
@@ -43,17 +13,11 @@
 </head>
 <body>
 
-<div class="card">
-    <h1>Контакты</h1>
-    
-    <div class="phone-box">
-        <a href="tel:+74951112233" class="phone-number" id="phone_moscow">74951112233</a>
-    </div>
+    <h1>Наши номера</h1>
 
-    <div class="phone-box">
-        <a href="tel:+78127654321" class="phone-number" id="phone_spb">78127654321</a>
-    </div>
-</div>
+    <a href="tel:+74951112233" class="phone-number" id="phone_moscow">74951112233</a>
+    
+    <a href="tel:+78127654321" class="phone-number" id="phone_spb">78127654321</a>
 
 </body>
 </html>

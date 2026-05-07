@@ -1,36 +1,27 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-    (function(m,e,t,r,i,k,a){
-        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=109084002', 'ym');
-
-    ym(109084002, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/109084002" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
     <meta charset="UTF-8">
     <title>Тест</title>
     <style>
-        body { font-family: sans-serif; padding: 50px; text-align: center; }
-        .phone { font-size: 30px; color: blue; text-decoration: none; display: block; margin: 20px; }
+        body { font-family: sans-serif; padding: 50px; text-align: center; background-color: #f4f7f6; }
+        .card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); display: inline-block; }
+        .phone { font-size: 30px; color: blue; text-decoration: none; display: block; margin: 20px; font-weight: bold; }
+        .widget-btn { background-color: #2563eb; color: white; border: none; padding: 12px 24px; border-radius: 6px; font-size: 16px; cursor: pointer; transition: background 0.3s; }
+        .widget-btn:hover { background-color: #1d4ed8; }
     </style>
-   <!-- Novofon -->
     <script type="text/javascript" async src="https://widget.novofon.ru/novofon.js?k=cakbuFqNIoqmPlC3CKakPIsuHvOsOGri"></script>
-<!-- Novofon -->
-</head>
+    </head>
 <body>
 
-    <h1>Наши номера</h1>
+    <div class="card">
+        <h1>Наши номера</h1>
 
-    <div class="phone" id="phone_moscow">+74951112233</div>
-    
-    <div class="phone" id="phone_spb">+78127654321</div>
+        <div class="phone" id="phone_moscow">+7 (495) 111-22-33</div>
+        <div class="phone" id="phone_spb">+7 (812) 765-43-21</div>
+
+        <button class="widget-btn" id="callback-button">Связаться с нами</button>
+    </div>
 
 </body>
 </html>

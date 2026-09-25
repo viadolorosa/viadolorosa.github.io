@@ -17,65 +17,112 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Задание</title>
+    <title>Коллтрекинг</title>
+
     <style>
-        body {
-            font-family: sans-serif;
+        * {
+            box-sizing: border-box;
             margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            background-color: #e0f2fe;
+            background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+            color: #1e293b;
+            padding: 20px;
         }
 
-        .container {
+        .card {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
             text-align: center;
+            max-width: 420px;
+            width: 100%;
         }
 
         h1 {
-            color: #334155;
-            font-weight: normal;
-            margin-bottom: 20px;
+            color: #0f172a;
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 28px;
+            letter-spacing: -0.02em;
         }
 
-        .calltracking-phones {
+        .phones-list {
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 16px;
         }
 
-        .calltracking-phones a {
+        .phone-item {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            background: #f8fafc;
+            padding: 14px 20px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            transition: all 0.2s ease;
+        }
+
+        .phone-item:hover {
+            border-color: #38bdf8;
+            background: #f0f9ff;
+            transform: translateY(-2px);
+        }
+
+        .phone-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #64748b;
+            font-weight: 600;
+        }
+
+        .phone-number {
             color: #0284c7;
             text-decoration: none;
-            font-size: 1.2rem;
-            font-weight: 600;
-            transition: color 0.2s ease;
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: -0.01em;
         }
 
-        .calltracking-phones a:hover {
+        .phone-number:hover {
             color: #0369a1;
         }
     </style>
+
     <!-- Виджет Novofon -->
     <script type="text/javascript" async src="https://widget.novofon.ru/novofon.js?k=cakbuFqNIoqmPlC3CKakPIsuHvOsOGri"></script>
 </head>
 <body>
 
-    <div class="container">
+    <div class="card">
         <h1>что-то происходит</h1>
 
-        <!-- Контейнер для динамической подмены номеров -->
-        <div class="calltracking-phones">
-            <!-- Телефон Санкт-Петербург -->
-            <a href="tel:+78129999999" class="phone-spb novofon-phone" data-phone="78129999999">
-                +7 (812) 999-99-99
-            </a>
+        <div class="phones-list">
+            <!-- Телефон для Санкт-Петербурга -->
+            <div class="phone-item">
+                <span class="phone-label">Санкт-Петербург</span>
+                <a href="tel:+78129999999" class="phone-spb novofon-phone phone-number" data-phone="78129999999">
+                    +7 (812) 999-99-99
+                </a>
+            </div>
 
-            <!-- Телефон Москва -->
-            <a href="tel:+74959999999" class="phone-msk novofon-phone" data-phone="74959999999">
-                +7 (495) 999-99-99
-            </a>
+            <!-- Телефон для Москвы -->
+            <div class="phone-item">
+                <span class="phone-label">Москва</span>
+                <a href="tel:+74959999999" class="phone-msk novofon-phone phone-number" data-phone="74959999999">
+                    +7 (495) 999-99-99
+                </a>
+            </div>
         </div>
     </div>
 

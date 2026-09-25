@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-    (function(m,e,t,r,i,k,a){
-        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=109084002', 'ym');
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=109084002', 'ym');
 
-    ym(109084002, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/109084002" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
+        ym(109084002, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/109084002" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Задание</title>
     <style>
         body {
@@ -26,31 +28,56 @@
             height: 100vh;
             background-color: #e0f2fe;
         }
+
+        .container {
+            text-align: center;
+        }
+
         h1 {
             color: #334155;
             font-weight: normal;
+            margin-bottom: 20px;
+        }
+
+        .calltracking-phones {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .calltracking-phones a {
+            color: #0284c7;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        .calltracking-phones a:hover {
+            color: #0369a1;
         }
     </style>
+    <!-- Виджет Novofon -->
     <script type="text/javascript" async src="https://widget.novofon.ru/novofon.js?k=cakbuFqNIoqmPlC3CKakPIsuHvOsOGri"></script>
-    </head>
+</head>
 <body>
 
-    <h1>что-то происходит</h1>
-    <!-- Ваша надпись -->
-<h2>что-то происходит</h2>
+    <div class="container">
+        <h1>что-то происходит</h1>
 
-<!-- Контейнер для телефонов -->
-<div class="calltracking-phones">
-  <!-- Телефон для СПб (78129999999) -->
-  <a href="tel:+78129999999" class="phone-spb" data-phone="78129999999">
-    +7 (812) 999-99-99
-  </a>
+        <!-- Контейнер для динамической подмены номеров -->
+        <div class="calltracking-phones">
+            <!-- Телефон Санкт-Петербург -->
+            <a href="tel:+78129999999" class="phone-spb novofon-phone" data-phone="78129999999">
+                +7 (812) 999-99-99
+            </a>
 
-  <!-- Телефон для Москвы (74959999999) -->
-  <a href="tel:+74959999999" class="phone-msk" data-phone="74959999999">
-    +7 (495) 999-99-99
-  </a>
-</div>
+            <!-- Телефон Москва -->
+            <a href="tel:+74959999999" class="phone-msk novofon-phone" data-phone="74959999999">
+                +7 (495) 999-99-99
+            </a>
+        </div>
+    </div>
 
 </body>
 </html>
